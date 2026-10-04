@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sayanggg ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Nunito',sans-serif;
+    background:#07111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   START SCREEN
+========================= */
+
+.start{
+    position:fixed;
+    inset:0;
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 50% 20%,rgba(70,100,170,.35),transparent 35%),
+        linear-gradient(#07162f 0%,#10274c 58%,#315d38 59%,#244927 100%);
+}
+
+.start-box{
+    width:90%;
+    max-width:560px;
+}
+
+.minecraft-title{
+    font-family:'Press Start 2P';
+    font-size:clamp(24px,7vw,50px);
+    line-height:1.55;
+
+    text-shadow:
+        5px 5px #000,
+        -2px -2px rgba(255,255,255,.15);
+
+    margin-bottom:25px;
+}
+
+.minecraft-title span{
+    color:#ff91a4;
+}
+
+.start-text{
+    font-size:17px;
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+    text-shadow:2px 2px #000;
+}
+
+.mc-button{
+    width:100%;
+    max-width:360px;
+
+    margin:10px auto;
+
+    padding:18px 15px;
+
+    border:3px solid #111;
+
+    background:#777;
+    color:white;
+
+    font-family:'Press Start 2P';
+    font-size:10px;
+
+    cursor:pointer;
+
+    box-shadow:
+        inset 3px 3px rgba(255,255,255,.3),
+        inset -3px -3px rgba(0,0,0,.5),
+        5px 5px rgba(0,0,0,.5);
+
+    transition:.15s;
+}
+
+.mc-button:hover{
+    background:#999;
+    transform:scale(1.03);
+}
+
+.mc-button:active{
+    transform:translate(4px,4px);
+    box-shadow:none;
+}
+
+/* =========================
+   WORLD
+========================= */
+
+.world{
+    min-height:100vh;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            rgba(8,17,37,.1),
+            rgba(8,17,37,.25)
+        ),
+        linear-gradient(
+            #07162f 0%,
+            #0b2145 60%,
+            #183b26 61%,
+            #28572e 100%
+        );
+}
+
+/* STARS */
+
+.stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    box-shadow:0 0 8px white;
+
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2}
+    to{opacity:1}
+}
+
+/* MOON */
+
+.moon{
+    position:absolute;
+
+    top:8%;
+    right:10%;
+
+    width:90px;
+    height:90px;
+
+    background:#fff7c7;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 35px rgba(255,255,200,.45);
+}
+
+.moon:after{
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    background:#07162f;
+
+    border-radius:50%;
+
+    top:-12px;
+    left:25px;
+}
+
+/* HUD */
+
+.hud{
+    position:fixed;
+
+    top:18px;
+    left:18px;
+    right:18px;
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:20;
+
+    pointer-events:none;
+}
+
+.hud-box{
+    background:rgba(0,0,0,.65);
+
+    border:2px solid #555;
+
+    padding:10px 14px;
+
+    font-family:'Press Start 2P';
+    font-size:8px;
+}
+
+.hearts{
+    color:#ff6b81;
+    letter-spacing:3px;
+}
+
+/* GROUND */
+
+.ground{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:32%;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(0,0,0,.08) 0,
+            rgba(0,0,0,.08) 40px,
+            transparent 40px,
+            transparent 80px
+        ),
+        linear-gradient(
+            #3d823c 0 18%,
+            #71482d 18% 100%
+        );
+
+    border-top:8px solid #65a84b;
+}
+
+/* =========================
+   HOUSE
+========================= */
+
+.house{
+    position:absolute;
+
+    bottom:24%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:280px;
+    height:210px;
+}
+
+.roof{
+    position:absolute;
+
+    top:0;
+    left:15px;
+
+    width:250px;
+    height:70px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #783b27 0,
+            #783b27 25px,
+            #63301f 25px,
+            #63301f 50px
+        );
+
+    clip-path:polygon(
+        50% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-bottom:7px solid #3b2118;
+}
+
+.house-body{
+    position:absolute;
+
+    bottom:0;
+    left:35px;
+
+    width:210px;
+    height:150px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #8b572f 0,
+            #8b572f 35px,
+            #754625 35px,
+            #754625 70px
+        );
+
+    border:7px solid #412719;
+}
+
+.door{
+    position:absolute;
+
+    bottom:0;
+    left:82px;
+
+    width:48px;
+    height:80px;
+
+    background:#50301d;
+
+    border:5px solid #28170e;
+}
+
+.door-knob{
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    right:7px;
+    top:40px;
+
+    background:#e4bd4e;
+}
+
+.window{
+    position:absolute;
+
+    width:48px;
+    height:45px;
+
+    top:35px;
+
+    background:#8ee8ff;
+
+    border:5px solid #392116;
+
+    box-shadow:0 0 15px #8ee8ff;
+}
+
+.window:after,
+.window:before{
+    content:"";
+
+    position:absolute;
+
+    background:#392116;
+}
+
+.window:after{
+    width:100%;
+    height:5px;
+    top:15px;
+    left:0;
+}
+
+.window:before{
+    width:5px;
+    height:100%;
+    top:0;
+    left:17px;
+}
+
+.window.left{
+    left:15px;
+}
+
+.window.right{
+    right:15px;
+}
+
+/* =========================
+   CHARACTERS
+========================= */
+
+.characters{
+    position:absolute;
+
+    bottom:23%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:300px;
+    height:130px;
+}
+
+.player{
+    position:absolute;
+
+    bottom:0;
+
+    width:70px;
+    height:110px;
+
+    animation:breathe 2s infinite ease-in-out;
+}
+
+@keyframes breathe{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-3px)}
+}
+
+.player.you{
+    left:35px;
+}
+
+.player.her{
+    right:35px;
+}
+
+.head{
+    position:absolute;
+
+    top:0;
+    left:15px;
+
+    width:40px;
+    height:40px;
+
+    background:#e7a77c;
+
+    border:4px solid #111;
+}
+
+.hair{
+    position:absolute;
+
+    top:-5px;
+    left:0;
+
+    width:40px;
+    height:15px;
+
+    background:#513524;
+
+    z-index:2;
+}
+
+.eye{
+    position:absolute;
+
+    top:20px;
+
+    width:5px;
+    height:5px;
+
+    background:#111;
+}
+
+.eye.one{left:9px}
+.eye.two{right:9px}
+
+.body{
+    position:absolute;
+
+    top:40px;
+    left:12px;
+
+    width:46px;
+    height:42px;
+
+    background:#4d73b8;
+
+    border:4px solid #111;
+}
+
+.her .body{
+    background:#d96b8a;
+}
+
+.leg{
+    position:absolute;
+
+    top:82px;
+
+    width:19px;
+    height:28px;
+
+    background:#29334b;
+
+    border:4px solid #111;
+}
+
+.leg.one{left:13px}
+.leg.two{right:12px}
+
+.her .leg{
+    background:#422a38;
+}
+
+/* =========================
+   MAIN MESSAGE
+========================= */
+
+.content{
+    position:relative;
+
+    z-index:10;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:flex-end;
+
+    padding-bottom:7vh;
+}
+
+.message-box{
+    width:min(680px,92%);
+
+    background:rgba(0,0,0,.8);
+
+    border:4px solid #111;
+
+    box-shadow:
+        inset 0 0 0 3px #555,
+        0 10px 30px rgba(0,0,0,.5);
+
+    padding:30px;
+
+    text-align:center;
+
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.message-box h1{
+    font-family:'Press Start 2P';
+
+    font-size:clamp(17px,4vw,28px);
+
+    line-height:1.7;
+
+    text-shadow:3px 3px #000;
+
+    margin-bottom:20px;
+}
+
+.message-box h1 span{
+    color:#ff91a4;
+}
+
+.message{
+    font-size:17px;
+    line-height:1.9;
+
+    color:#eee;
+}
+
+.message p{
+    margin-bottom:20px;
+}
+
+.message strong{
+    color:#ff91a4;
+}
+
+/* =========================
+   STORY SECTION
+========================= */
+
+.story{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:50px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.8)
+        ),
+        #172238;
+}
+
+.story-box{
+    width:min(720px,95%);
+
+    background:rgba(20,20,20,.85);
+
+    border:4px solid #111;
+
+    box-shadow:
+        inset 0 0 0 3px #555,
+        0 20px 50px rgba(0,0,0,.5);
+
+    padding:35px;
+}
+
+.pixel-heading{
+    font-family:'Press Start 2P';
+
+    font-size:clamp(17px,4vw,27px);
+
+    line-height:1.8;
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.pixel-heading span{
+    color:#ff91a4;
+}
+
+.story-text{
+    font-size:17px;
+
+    line-height:1.95;
+}
+
+.story-text p{
+    margin-bottom:20px;
+}
+
+.story-text .special{
+    color:#ff91a4;
+    font-weight:800;
+}
+
+/* =========================
+   CHEST
+========================= */
+
+.chest-section{
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #263e29,
+            #08110a
+        );
+}
+
+.chest-section h2{
+    font-family:'Press Start 2P';
+
+    font-size:clamp(16px,4vw,25px);
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.chest{
+    width:150px;
+    height:120px;
+
+    margin:0 auto 25px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    filter:drop-shadow(0 10px 10px rgba(0,0,0,.5));
+}
+
+.chest:hover{
+    transform:scale(1.08);
+}
+
+.chest-top{
+    position:absolute;
+
+    top:10px;
+    left:0;
+
+    width:150px;
+    height:45px;
+
+    background:#9b5c2d;
+
+    border:7px solid #422616;
+}
+
+.chest-bottom{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:150px;
+    height:75px;
+
+    background:#8a4d25;
+
+    border:7px solid #422616;
+}
+
+.chest-lock{
+    position:absolute;
+
+    z-index:3;
+
+    top:48px;
+    left:62px;
+
+    width:27px;
+    height:35px;
+
+    background:#e0b94d;
+
+    border:5px solid #5a3d16;
+}
+
+.reward{
+    display:none;
+
+    max-width:580px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    animation:fadeUp 1s;
+}
+
+.reward.show{
+    display:block;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section{
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    background:#0b1524;
+}
+
+.letter{
+    width:min(680px,95%);
+
+    background:#f6e6c8;
+
+    color:#33271f;
+
+    padding:45px 35px;
+
+    box-shadow:0 15px 50px rgba(0,0,0,.5);
+
+    transform:rotate(-1deg);
+
+    position:relative;
+}
+
+.letter:before{
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:2px dashed #9d856a;
+
+    pointer-events:none;
+}
+
+.letter h2{
+    font-family:'Press Start 2P';
+
+    font-size:18px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.letter p{
+    font-size:17px;
+
+    line-height:2;
+
+    margin-bottom:18px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #283b67,
+            #060b18 70%
+        );
+}
+
+.final-box{
+    width:min(700px,95%);
+}
+
+.final h2{
+    font-family:'Press Start 2P';
+
+    font-size:clamp(19px,5vw,35px);
+
+    line-height:1.8;
+
+    text-shadow:4px 4px #000;
+
+    margin-bottom:35px;
+}
+
+.final h2 span{
+    color:#ff8fa3;
+}
+
+.final-question{
+    font-size:21px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.yes{
+    background:#d85d73;
+}
+
+.no{
+    background:#555;
+}
+
+.answer{
+    display:none;
+
+    margin-top:30px;
+
+    font-size:21px;
+
+    color:#ff9daf;
+
+    font-weight:800;
+
+    line-height:1.8;
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.floating-heart{
+    position:fixed;
+
+    bottom:-30px;
+
+    z-index:50;
+
+    pointer-events:none;
+
+    animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+    to{
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* MUSIC */
+
+.music{
+    position:fixed;
+
+    right:18px;
+    bottom:18px;
+
+    z-index:100;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    border:3px solid #111;
+
+    background:#777;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .house{
+        transform:translateX(-50%) scale(.7);
+        bottom:27%;
+    }
+
+    .characters{
+        transform:translateX(-50%) scale(.8);
+        bottom:24%;
+    }
+
+    .message-box{
+        padding:22px 18px;
+    }
+
+    .message{
+        font-size:15px;
+    }
+
+    .story-box{
+        padding:23px 18px;
+    }
+
+    .story-text{
+        font-size:15px;
+    }
+
+    .letter{
+        padding:35px 25px;
+    }
+
+    .letter p{
+        font-size:15px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     START
+========================= -->
+
+<section class="start" id="start">
+
+    <div class="start-box">
+
+        <div class="minecraft-title">
+            A LITTLE<br>
+            <span>WORLD FOR YOU</span>
+        </div>
+
+        <div class="start-text">
+            Ada satu dunia kecil yang aku bikin...
+            <br>
+            bukan buat semua orang.
+            <br><br>
+
+            Cuma buat <b>Sayanggg ❤️</b>
+        </div>
+
+        <button class="mc-button" onclick="enterWorld()">
+            ▶ ENTER WORLD
+        </button>
+
+        <button class="mc-button" onclick="showSecret()">
+            ✦ SECRET
+        </button>
+
+        <p id="secret"
+           style="
+           display:none;
+           margin-top:20px;
+           line-height:1.8;
+           ">
+            Peringatan:
+            <br><br>
+            Dunia ini mengandung terlalu banyak
+            rasa sayang dan sedikit kegilaan. 😂❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORLD
+========================= -->
+
+<section class="world">
+
+    <div class="stars" id="stars"></div>
+
+    <div class="moon"></div>
+
+    <div class="hud">
+
+        <div class="hud-box">
+            WORLD: LOVE
+        </div>
+
+        <div class="hud-box hearts">
+            ❤️ ❤️ ❤️ ❤️ ❤️
+        </div>
+
+    </div>
+
+
+    <!-- HOUSE -->
+
+    <div class="house">
+
+        <div class="roof"></div>
+
+        <div class="house-body">
+
+            <div class="window left"></div>
+            <div class="window right"></div>
+
+            <div class="door">
+                <div class="door-knob"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHARACTERS -->
+
+    <div class="characters">
+
+        <div class="player you">
+
+            <div class="head">
+
+                <div class="hair"></div>
+
+                <div class="eye one"></div>
+                <div class="eye two"></div>
+
+            </div>
+
+            <div class="body"></div>
+
+            <div class="leg one"></div>
+            <div class="leg two"></div>
+
+        </div>
+
+
+        <div class="player her">
+
+            <div class="head">
+
+                <div
+                    class="hair"
+                    style="background:#2f2020;">
+                </div>
+
+                <div class="eye one"></div>
+                <div class="eye two"></div>
+
+            </div>
+
+            <div class="body"></div>
+
+            <div class="leg one"></div>
+            <div class="leg two"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="ground"></div>
+
+
+    <!-- FIRST MESSAGE -->
+
+    <div class="content">
+
+        <div class="message-box">
+
+            <div style="
+                font-size:45px;
+                margin-bottom:10px;">
+                ❤️
+            </div>
+
+            <h1>
+                HAPPY BIRTHDAY,<br>
+                <span>SAYANGGG</span>
+            </h1>
+
+            <div class="message">
+
+                <p>
+                    Bub...
+                    <br><br>
+
+                    akhirnya sampai juga kamu di sini.
+                    😂❤️
+                </p>
+
+                <p>
+                    Aku sebenarnya nggak tahu harus bikin
+                    ucapan yang kayak gimana.
+                    Soalnya kalau cuma bilang
+                    <strong>"happy birthday"</strong>,
+                    rasanya kurang banget.
+                </p>
+
+                <p>
+                    Karena buat aku,
+                    kamu bukan cuma seseorang yang
+                    kebetulan ulang tahun hari ini.
+                </p>
+
+                <p>
+                    Kamu adalah seseorang yang
+                    <strong>entah gimana caranya,
+                    bisa masuk ke hidup aku dan
+                    bikin semuanya jadi lebih berwarna.</strong>
+                </p>
+
+                <p>
+                    Dan lucunya...
+                    semua ini berawal dari sesuatu
+                    yang sama sekali nggak aku rencanakan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUR STORY
+========================= -->
+
+<section class="story">
+
+    <div class="story-box">
+
+        <div class="pixel-heading">
+            OUR LITTLE<br>
+            <span>STORY</span>
+        </div>
+
+        <div class="story-text">
+
+            <p>
+                Kalau dipikir-pikir sekarang,
+                <strong>ga nyangka ya dulu kita ketemu
+                lewat epep wkwkw.</strong>
+            </p>
+
+            <p>
+                Waktu itu aku lagi gabut.
+                Bener-bener cuma main karena nggak tahu
+                mau ngapain.
+            </p>
+
+            <p>
+                Terus tiba-tiba...
+                aku nemu kamu.
+            </p>
+
+            <p>
+                Awalnya kamu diem aja sih.
+                😂
+            </p>
+
+            <p>
+                Terus entah kenapa aku malah nyuruh kamu
+                <strong>on mic.</strong>
+            </p>
+
+            <p>
+                Dan akhirnya kamu beneran on mic.
+            </p>
+
+            <p>
+                Kamu waktu itu pakai karakter favorit kamu
+                yang cowok.
+            </p>
+
+            <p>
+                Nah di situ aku udah mulai feeling...
+            </p>
+
+            <p class="special">
+                "Ini orang kayaknya cewek deh."
+            </p>
+
+            <p>
+                WKWKWK.
+            </p>
+
+            <p>
+                Udah kayak dukun aja aku waktu itu,
+                belum tahu apa-apa tapi sok tahu. 😂
+            </p>
+
+            <p>
+                Sampai akhirnya aku dengar suara kamu.
+            </p>
+
+            <p>
+                Dan jujur ya...
+                <strong>degg.</strong>
+            </p>
+
+            <p>
+                Kayak...
+            </p>
+
+            <p class="special">
+                "Wahh imut nih orangnyaa."
+            </p>
+
+            <p>
+                Terus otak aku langsung:
+            </p>
+
+            <p class="special">
+                "Pepet ahh." 😭
+            </p>
+
+            <p>
+                Xixixi.
+            </p>
+
+            <p>
+                Dan ternyata dari satu momen random itu,
+                dari game yang awalnya cuma buat ngisi waktu,
+                aku malah ketemu seseorang yang sekarang
+                punya tempat spesial banget buat aku.
+            </p>
+
+            <p>
+                <strong>
+                    Kalau waktu itu aku nggak gabut,
+                    mungkin cerita kita nggak akan pernah mulai.
+                </strong>
+            </p>
+
+            <p>
+                Jadi sekarang aku malah bersyukur
+                pernah gabut hari itu.
+                ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INSIDE JOKES
+========================= -->
+
+<section class="story"
+style="
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+#263b28;
+">
+
+    <div class="story-box">
+
+        <div class="pixel-heading">
+            THINGS ONLY<br>
+            <span>WE UNDERSTAND</span>
+        </div>
+
+        <div class="story-text">
+
+            <p>
+                Terus ada satu hal yang entah kenapa
+                kalau dipikir-pikir sekarang malah bikin
+                ketawa sendiri.
+            </p>
+
+            <p style="
+                text-align:center;
+                font-size:25px;
+                color:#ff91a4;
+                font-weight:800;
+                ">
+                IKAN CUPANG<br>
+                MAKAN CACING
+            </p>
+
+            <p style="
+                text-align:center;
+                font-family:'Press Start 2P';
+                font-size:17px;
+                ">
+                CAKEPPP 😭
+            </p>
+
+            <p>
+                Aku nggak tahu kenapa kalimat random
+                kayak gitu bisa jadi sesuatu yang
+                nyangkut di kepala.
+            </p>
+
+            <p>
+                Tapi mungkin memang begitu ya...
+                sesuatu yang kecil dan nggak penting
+                buat orang lain bisa jadi lucu banget
+                kalau datang dari orang yang kita sayang.
+            </p>
+
+            <p>
+                Sama kayak panggilan kita.
+            </p>
+
+            <p>
+                Kita sebenarnya nggak punya panggilan
+                khusus yang gimana-gimana.
+            </p>
+
+            <p>
+                Kadang <strong>bub</strong>.
+                Kadang <strong>sayang</strong>.
+                Kadang ya apa aja yang penting
+                <strong>sama kamu.</strong>
+            </p>
+
+            <p style="
+                text-align:center;
+                color:#ff91a4;
+                font-weight:800;
+                ">
+                Karena ternyata yang bikin
+                sebuah panggilan terasa spesial
+                bukan katanya...
+                <br><br>
+                tapi orangnya.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHEST
+========================= -->
+
+<section class="chest-section">
+
+    <div>
+
+        <h2>
+            🎁 ONE MORE THING
+        </h2>
+
+        <p style="
+            margin-bottom:30px;
+            font-size:16px;
+            ">
+            Aku punya sesuatu buat kamu.
+            <br>
+            Klik chest-nya, bub.
+        </p>
+
+        <div class="chest" onclick="openChest()">
+
+            <div class="chest-top"></div>
+
+            <div class="chest-bottom"></div>
+
+            <div class="chest-lock"></div>
+
+        </div>
+
+        <div class="reward" id="reward">
+
+            <p>
+                🎁
+            </p>
+
+            <br>
+
+            <p>
+                Aku pengen kasih kamu banyak hal.
+                Bukan cuma hari ini,
+                tapi juga di hari-hari berikutnya.
+            </p>
+
+            <p>
+                Tawa.
+                Cerita.
+                Waktu.
+                Pelukan.
+                Dan mungkin sedikit
+                ke-random-an yang bikin kita ketawa
+                sampai lupa waktu.
+            </p>
+
+            <p>
+                Tapi kalau aku cuma boleh kasih
+                satu hal...
+            </p>
+
+            <h2 style="color:#ff91a4;">
+                AKU KASIH HATI AKU. ❤️
+            </h2>
+
+            <p>
+                Tolong jangan dibuang ya.
+                Susah nyarinya.
+                Cuma punya satu. 😭
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="letter-section">
+
+    <div class="letter">
+
+        <h2>
+            Dear Sayanggg ❤️
+        </h2>
+
+        <p>
+            Aku nggak tahu apakah aku bisa jadi
+            seseorang yang sempurna buat kamu.
+            Mungkin enggak.
+        </p>
+
+        <p>
+            Aku masih bisa bikin kamu kesel,
+            masih bisa salah ngomong,
+            masih bisa punya banyak kekurangan.
+        </p>
+
+        <p>
+            Tapi aku harap kamu tahu satu hal:
+            <strong>aku benar-benar menghargai
+            keberadaan kamu.</strong>
+        </p>
+
+        <p>
+            Aku suka ngobrol sama kamu.
+            Aku suka denger cerita kamu.
+            Aku suka ketika kamu ketawa.
+        </p>
+
+        <p>
+            Bahkan hal-hal random yang kita omongin
+            kadang justru jadi hal yang paling aku ingat.
+        </p>
+
+        <p>
+            Aku juga suka kenyataan bahwa
+            dari sebuah pertemuan yang awalnya
+            bahkan nggak direncanakan,
+            sekarang ada seseorang yang
+            bisa bikin aku senyum cuma karena
+            satu notif.
+        </p>
+
+        <p>
+            Aku nggak mau janji yang terlalu besar.
+            Aku cuma mau terus berusaha
+            jadi seseorang yang bisa kamu percaya,
+            tempat kamu cerita,
+            tempat kamu bercanda,
+            dan kalau suatu hari kamu capek...
+            tempat kamu pulang.
+        </p>
+
+        <p>
+            Kalau nanti ada hari yang nggak mudah,
+            semoga kita nggak langsung menyerah.
+        </p>
+
+        <p>
+            Kalau ada salah paham,
+            semoga kita mau saling dengar.
+        </p>
+
+        <p>
+            Kalau ada masalah,
+            semoga kita ingat kenapa kita memilih
+            untuk tetap ada satu sama lain.
+        </p>
+
+        <p>
+            Karena aku nggak cuma suka versi kamu
+            yang lagi bahagia.
+        </p>
+
+        <p>
+            Aku juga mau mengenal versi kamu
+            yang lagi capek,
+            lagi sedih,
+            lagi bingung,
+            bahkan versi kamu yang kadang
+            ngeselin itu. 😂❤️
+        </p>
+
+        <p>
+            Jadi...
+        </p>
+
+        <p>
+            Selamat ulang tahun, Sayanggg.
+        </p>
+
+        <p>
+            Terima kasih karena pernah
+            menyalakan mic hari itu.
+            😂
+        </p>
+
+        <p>
+            Kalau waktu itu kamu nggak on mic,
+            mungkin aku nggak akan pernah tahu
+            suara yang akhirnya bisa jadi
+            salah satu suara favorit aku.
+        </p>
+
+        <p>
+            <strong>
+                I love you.
+                More than I probably know
+                how to explain.
+            </strong>
+        </p>
+
+        <p style="
+            text-align:right;
+            font-weight:800;
+            ">
+            — dari aku,<br>
+            yang awalnya cuma gabut,
+            <br>
+            terus malah ketemu kamu. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+    <div class="final-box">
+
+        <div style="
+            font-size:60px;
+            margin-bottom:20px;
+            ">
+            🌙❤️
+        </div>
+
+        <h2>
+            ONE LAST<br>
+            <span>QUESTION...</span>
+        </h2>
+
+        <div class="final-question">
+
+            Kalau suatu hari nanti
+            kita melihat kembali semua cerita ini...
+
+            <br><br>
+
+            dari sebuah game,
+            dari orang random,
+            dari mic yang awalnya aku suruh nyala...
+
+            <br><br>
+
+            sampai akhirnya jadi
+            <span style="color:#ff91a4;">
+                kita.
+            </span>
+
+            <br><br>
+
+            <strong>
+                Will you still choose me?
+            </strong>
+
+        </div>
+
+        <button
+            class="mc-button yes"
+            onclick="answerYes()">
+            ❤️ YES, ALWAYS
+        </button>
+
+        <button
+            class="mc-button no"
+            onclick="answerNo()">
+            🥺 LET ME THINK
+        </button>
+
+        <div class="answer" id="answer">
+
+            <p>
+                Hehe... aku simpan jawaban itu. ❤️
+            </p>
+
+            <p style="margin-top:20px;">
+                Dan kalau kamu benar-benar mau tetap
+                di sini...
+            </p>
+
+            <p style="margin-top:20px;">
+                aku juga mau.
+            </p>
+
+            <p style="
+                margin-top:25px;
+                font-size:26px;
+                ">
+                ❤️
+            </p>
+
+            <p style="margin-top:20px;">
+                Happy Birthday, Sayanggg.
+            </p>
+
+            <p>
+                Dari aku yang dulu cuma gabut main epep...
+            </p>
+
+            <p>
+                tapi akhirnya menemukan
+                <strong>kamu.</strong>
+            </p>
+
+            <p style="
+                margin-top:25px;
+                color:#ff91a4;
+                ">
+                I love you.
+                <br>
+                Always.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    class="music"
+    onclick="toggleMusic()"
+    id="musicButton">
+    🎵
+</button>
+
+
+<script>
+
+/* =========================
+   ENTER WORLD
+========================= */
+
+function enterWorld(){
+
+    document.getElementById("start").style.display="none";
+
+    const music=document.getElementById("music");
+
+    music.volume=.35;
+
+    music.play().catch(()=>{});
+
+    createStars();
+
+    startHearts();
+
+}
+
+
+/* =========================
+   SECRET
+========================= */
+
+function showSecret(){
+
+    const secret=document.getElementById("secret");
+
+    secret.style.display =
+        secret.style.display==="none"
+        ? "block"
+        : "none";
+
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+function createStars(){
+
+    const container=document.getElementById("stars");
+
+    for(let i=0;i<120;i++){
+
+        const star=document.createElement("div");
+
+        star.className="star";
+
+        star.style.left=
+            Math.random()*100+"%";
+
+        star.style.top=
+            Math.random()*70+"%";
+
+        star.style.animationDelay=
+            Math.random()*3+"s";
+
+        container.appendChild(star);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function startHearts(){
+
+    setInterval(()=>{
+
+        const heart=document.createElement("div");
+
+        heart.className="floating-heart";
+
+        const list=[
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "💘",
+            "✨"
+        ];
+
+        heart.innerHTML=
+            list[
+                Math.floor(
+                    Math.random()*list.length
+                )
+            ];
+
+        heart.style.left=
+            Math.random()*100+"vw";
+
+        heart.style.fontSize=
+            15+Math.random()*20+"px";
+
+        heart.style.animationDuration=
+            5+Math.random()*5+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },10000);
+
+    },700);
+
+}
+
+
+/* =========================
+   CHEST
+========================= */
+
+function openChest(){
+
+    const reward=document.getElementById("reward");
+
+    reward.classList.add("show");
+
+    for(let i=0;i<20;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="floating-heart";
+
+            heart.innerHTML="❤️";
+
+            heart.style.left=
+                (35+Math.random()*30)+"vw";
+
+            heart.style.fontSize=
+                20+Math.random()*20+"px";
+
+            heart.style.animationDuration=
+                "3s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },4000);
+
+        },i*100);
+
+    }
+
+}
+
+
+/* =========================
+   YES
+========================= */
+
+function answerYes(){
+
+    const answer=document.getElementById("answer");
+
+    answer.style.display="block";
+
+    for(let i=0;i<35;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="floating-heart";
+
+            heart.innerHTML="❤️";
+
+            heart.style.left=
+                Math.random()*100+"vw";
+
+            heart.style.fontSize=
+                20+Math.random()*25+"px";
+
+            heart.style.animationDuration=
+                4+Math.random()*3+"s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },7000);
+
+        },i*80);
+
+    }
+
+}
+
+
+/* =========================
+   NO
+========================= */
+
+function answerNo(){
+
+    alert(
+        "Gapapa bub... aku tunggu sampai kamu yakin. 🥺❤️"
+    );
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function toggleMusic(){
+
+    const music=document.getElementById("music");
+
+    const button=document.getElementById("musicButton");
+
+    if(music.paused){
+
+        music.play();
+
+        button.innerHTML="🎵";
+
+    }else{
+
+        music.pause();
+
+        button.innerHTML="🔇";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
